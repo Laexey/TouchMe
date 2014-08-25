@@ -3,5 +3,9 @@
 
     <string name="hello">Hello World, MainActivity!</string>
     <string name="app_name">DataBase</string>
+	<string name="contacts">Contacts</string>
+	<string name="type_text_hint">Message</string>
+	<string name="menu_item_new_message">New Message</string>
+	<string name="notification_msg">New Message</string>
 
 </resources>

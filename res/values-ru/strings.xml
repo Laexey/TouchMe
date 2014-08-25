@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="app_name">БазаДанных</string>
+	<string name="contacts">Контакты</string>
+	<string name="type_text_hint">Сообщение</string>
+	<string name="menu_item_new_message">Новое Сообщение</string>
+	<string name="notification_msg">Сообщение</string>
+	
+</resources>
