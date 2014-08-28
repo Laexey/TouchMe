@@ -30,7 +30,7 @@ public class ThreadsActivity extends ListActivity
 	private Uri smsBox = Uri.parse("content://sms/");
 	private Uri threads = Uri.parse("content://sms/conversations");
 	final static String SELECT_ADDRESS="select_address";
-    final static int RESULT_OK = 1;	
+    final static int RESULT_OK = 1;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -165,7 +165,7 @@ public class ThreadsActivity extends ListActivity
 			Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
 		}
 	
-		if(cursor != null && threads_cur != null)
+		if(cursor.getCount() != 0 && threads_cur.getCount() != 0)
 		{			
 			list = new ArrayList<Map<String, Object>>();
 			ArrayList<Integer> threads_list = new ArrayList<>();
@@ -217,7 +217,7 @@ public class ThreadsActivity extends ListActivity
 				new String [] {THREAD, MSG_COUNT, SNIPPET},
 				null, null, THREAD + " ASC");
 		//запрашиваем базу данных смс
-		cursor = getContentResolver().query(smsBox, filter, null, null, order);	
+        cursor = getContentResolver().query(smsBox, filter, null, null, order);
 	}
 		
 }

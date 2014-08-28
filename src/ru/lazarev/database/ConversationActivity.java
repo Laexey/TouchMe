@@ -79,7 +79,7 @@ implements OnClickListener, OnTouchListener
 		//здесь разместить код для обновления Activity, если он
 		//на переднем плане
 		//super.onNewIntent(intent);
-		makeCursor();
+		//makeCursor();
 		Bundle bndl = intent.getExtras();
 
 		ContentValues addValues = new ContentValues();
@@ -231,7 +231,7 @@ implements OnClickListener, OnTouchListener
 					adapt.notifyDataSetChanged();
 					editSendText.setText("");
 					
-					//Toast.makeText(this, "Сообщение отправлено", Toast.LENGTH_SHORT).show();
+					Toast.makeText(this, "Сообщение отправлено", Toast.LENGTH_SHORT).show();
 	            }
 			break;
 		}
@@ -308,6 +308,6 @@ implements OnClickListener, OnTouchListener
 		String like =  "'%" + transferredAddress.substring(2) + "'";
 		String where = ADDRESS + " LIKE " + like;
 		String order = DATE + " ASC";//сортировка по возрастанию даты
-		cursor = this.getContentResolver().query(smsBox, filter, where, null, order);	
+		cursor = this.getContentResolver().query(smsBox, filter, where, null, order);
 	}
 }
